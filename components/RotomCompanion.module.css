@@ -1,0 +1,52 @@
+.wrap {
+  position: absolute;
+  top: -20px;
+  right: 4px;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  animation: companionBob 2.6s ease-in-out infinite;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes companionBob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(3deg);
+  }
+}
+
+.excited {
+  animation: companionJump 1.2s ease-in-out;
+}
+
+@keyframes companionJump {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    transform: translateY(-16px) scale(1.2) rotate(-8deg);
+  }
+  40% {
+    transform: translateY(0) scale(0.92) rotate(6deg);
+  }
+  55% {
+    transform: translateY(-9px) scale(1.1) rotate(-4deg);
+  }
+  75% {
+    transform: translateY(0) scale(1) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}

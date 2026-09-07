@@ -1,0 +1,327 @@
+.card {
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  text-align: left;
+  color: var(--text-primary);
+  /* Sem isso, dentro do container com -webkit-overflow-scrolling: touch (o .screen do shell), o
+     conteúdo do card pode mostrar um efeito de textura/gradiente até rolar pra vista, enquanto o
+     WebKit (Safari mobile) ainda não compositou tudo — força o card pro seu próprio layer. */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.spriteButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.sprite {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.spriteBounce {
+  animation: hop 0.7s ease;
+  transform-origin: 50% 100%;
+}
+
+@keyframes hop {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  12% {
+    transform: translateY(2px) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-16px) rotate(-10deg);
+  }
+  45% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+  60% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(4deg);
+  }
+  88% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.genus {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.confidence {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}
+
+.capturedTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #2fa84f;
+  border: 1px solid #2fa84f;
+  border-radius: 999px;
+  padding: 2px 8px 2px 4px;
+}
+
+.capturedTagIcon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.uncapturedTag {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.types {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.flavorBox {
+  margin-top: 14px;
+  background: var(--flavor-bg);
+  border: 2px solid var(--flavor-border);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: var(--flavor-text);
+}
+
+.flavorLang {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--flavor-text-muted);
+}
+
+.speakButton {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.speakButton:active {
+  background: var(--accent-blue-dark);
+}
+
+.tabBar {
+  display: flex;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  background: var(--surface-bg);
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.tabIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+
+.tabActive {
+  background: var(--surface-bg-alt);
+  color: var(--text-primary);
+}
+
+.tabContent {
+  background: var(--surface-bg-alt);
+  border-radius: 0 0 12px 12px;
+  padding: 14px;
+}
+
+.tabContent > *:first-child {
+  margin-top: 0;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.sectionTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.abilityItem {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.abilityItem:last-child {
+  border-bottom: none;
+}
+
+.abilityName {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.abilityEffect {
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.weaknessGroup {
+  margin-bottom: 8px;
+}
+
+.weaknessLabel {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.weaknessBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.evolutionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.evolutionStage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 64px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.evolutionStage:active {
+  background: var(--surface-bg-alt);
+}
+
+.evolutionStageCurrent {
+  border-radius: 10px;
+  background: var(--surface-bg-alt);
+}
+
+.evolutionSprite {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.evolutionName {
+  font-size: 0.65rem;
+  text-transform: capitalize;
+  color: var(--text-primary);
+}
+
+.evolutionTrigger {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+}
+
+.evolutionArrow {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
