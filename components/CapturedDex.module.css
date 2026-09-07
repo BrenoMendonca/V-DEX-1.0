@@ -1,0 +1,236 @@
+.searchWrap {
+  position: relative;
+}
+
+.searchForm {
+  display: flex;
+  gap: 8px;
+}
+
+.suggestions {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  list-style: none;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px var(--shadow-soft);
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  text-align: left;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.suggestionItem:active {
+  background: var(--surface-bg-alt);
+}
+
+.suggestionSprite {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.suggestionName {
+  flex: 1;
+  min-width: 0;
+}
+
+.suggestionNumber {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.detailNav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backButton {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.backButton:active {
+  background: var(--surface-bg-alt);
+}
+
+.pager {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+}
+
+.pagerButton {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.pagerButton:active:not(:disabled) {
+  background: var(--surface-bg-alt);
+}
+
+.pagerButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg-alt);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--accent-blue);
+}
+
+.searchButton {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.searchButton:active {
+  background: var(--accent-blue-dark);
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filterSelect {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  background: var(--surface-bg-alt);
+  color: var(--text-primary);
+  font-size: 0.78rem;
+  outline: none;
+}
+
+.filterSelect:focus {
+  border-color: var(--accent-blue);
+}
+
+.clearButton {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--danger-border);
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
+  gap: 6px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: var(--surface-bg-alt);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cellNumber {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.cellSprite {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.cellSelected {
+  border-color: #ef4453;
+  background: var(--selected-bg);
+}
+
+.ball {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ef4453 49%, #111 49%, #111 52%, #fff 52%);
+  border: 1px solid #111;
+}
+
+.detailPlaceholder {
+  border-radius: 12px;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 20px 10px;
+}

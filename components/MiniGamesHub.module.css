@@ -1,0 +1,58 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menuTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gameCard {
+  text-align: left;
+  border-radius: 12px;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  padding: 14px;
+  cursor: pointer;
+}
+
+.gameCard:active {
+  background: var(--surface-bg-alt);
+}
+
+.gameCardTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gameCardDescription {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.gameWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.backButton {
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg);
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.backButton:active {
+  background: var(--surface-bg-alt);
+}

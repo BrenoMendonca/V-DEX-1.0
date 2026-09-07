@@ -1,0 +1,78 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px 4px;
+}
+
+.tabs {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.tab,
+.tabActive {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.tab {
+  background: var(--surface-bg-alt);
+  color: var(--text-secondary);
+}
+
+.tabActive {
+  background: var(--accent-blue);
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg-alt);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent-blue);
+}
+
+.error {
+  font-size: 0.78rem;
+  color: var(--danger-text);
+}
+
+.submitButton {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.submitButton:active {
+  background: var(--accent-blue-dark);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

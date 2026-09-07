@@ -1,0 +1,65 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  margin-top: -6px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  border-radius: 12px;
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  padding: 12px 14px;
+  cursor: pointer;
+  /* Sem isso, listas longas dentro de um container com -webkit-overflow-scrolling: touch
+     (como esta) podem mostrar um efeito de textura/gradiente nos cards ainda não totalmente
+     compositados pelo WebKit (Safari mobile) até rolarem pra vista — força cada card pro seu
+     próprio layer de composição, evitando o glitch. */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.option:active {
+  background: var(--surface-bg-alt);
+}
+
+.optionBall {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  color: #ef4453;
+}
+
+.optionTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.optionSubtitle {
+  margin-top: 2px;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}

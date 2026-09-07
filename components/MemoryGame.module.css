@@ -1,0 +1,112 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 1;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card:disabled {
+  cursor: default;
+}
+
+.cardBack,
+.cardFront {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  animation: cardPop 0.2s ease both;
+}
+
+.cardBack {
+  background: var(--accent-blue);
+}
+
+.cardBackIcon {
+  width: 55%;
+  height: 55%;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cardFront {
+  background: var(--surface-bg-alt);
+  padding: 6px;
+}
+
+@keyframes cardPop {
+  from {
+    transform: scale(0.85);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cardFrontMatched {
+  border-color: #2fa84f;
+}
+
+.cardSprite {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.winBox {
+  text-align: center;
+  padding: 30px 16px;
+  border-radius: 12px;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.winText {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.restartButton {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.restartButton:active {
+  background: var(--accent-blue-dark);
+}

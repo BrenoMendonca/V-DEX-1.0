@@ -1,0 +1,221 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.hintsUsedLabel {
+  color: var(--text-muted);
+}
+
+.helpButton {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg-alt);
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.helpButton:active {
+  background: var(--surface-bg);
+}
+
+.loadingText {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 30px 0;
+}
+
+.regionLabel {
+  margin-top: -8px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.silhouetteBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  border-radius: 12px;
+  background: var(--surface-bg-alt);
+  border: 1px solid var(--border-color);
+}
+
+.silhouette {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.blanks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.blankLetter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 32px;
+  border: none;
+  border-bottom: 3px solid var(--text-muted);
+  border-radius: 4px 4px 0 0;
+  background: var(--surface-bg-alt);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.blankLetter:disabled {
+  cursor: default;
+}
+
+.blankLetterLocked {
+  border-bottom-color: #2fa84f;
+  color: #2fa84f;
+}
+
+.blankGap {
+  width: 12px;
+}
+
+.feedbackCorrect {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #2fa84f;
+  text-transform: capitalize;
+}
+
+.feedbackWrong {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--danger-text);
+  text-transform: capitalize;
+}
+
+.bank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+}
+
+.tile {
+  width: 30px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.tile:active:not(:disabled) {
+  background: var(--surface-bg-alt);
+}
+
+.tile:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 8px;
+}
+
+.submitButton {
+  flex: 2;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.submitButton:active:not(:disabled) {
+  background: var(--accent-blue-dark);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.hintButton {
+  flex: 1;
+  padding: 12px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-bg-alt);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.hintButton:active:not(:disabled) {
+  background: var(--surface-bg);
+}
+
+.hintButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.giveUpButton {
+  align-self: center;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nextButton {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.nextButton:active {
+  background: var(--accent-blue-dark);
+}

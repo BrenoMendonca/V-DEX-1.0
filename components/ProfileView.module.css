@@ -1,0 +1,137 @@
+.page {
+  margin: -16px;
+  padding: 16px;
+  min-height: calc(100% + 32px);
+  background: linear-gradient(160deg, #ef4453, #c8102e 60%, #a80d27);
+  position: relative;
+  overflow: hidden;
+}
+
+.pageBall {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+.headerText .title {
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.card {
+  border-radius: 12px;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  color: var(--text-primary);
+}
+
+.progressTrack {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--border-color);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2b8fc7, #7fd9f5);
+}
+
+.sectionTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.typeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.typeRow:last-child {
+  margin-bottom: 0;
+}
+
+.typeCount {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.recentList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recentItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recentSprite {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.recentName {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--text-primary);
+}
+
+.recentDate {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 10px 0;
+}

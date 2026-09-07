@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.svg {
+  width: 100%;
+  max-width: 240px;
+  display: block;
+}
+
+.grid {
+  fill: none;
+  stroke: var(--border-color);
+  stroke-width: 1;
+}
+
+.axis {
+  stroke: var(--border-color);
+  stroke-width: 1;
+}
+
+.value {
+  fill-opacity: 0.35;
+  stroke-width: 2;
+}
+
+.label {
+  font-size: 9px;
+  font-weight: 700;
+  fill: var(--text-secondary);
+}
+
+.dot {
+  stroke: var(--screen-bg);
+  stroke-width: 1;
+}

@@ -1,0 +1,149 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scoreRow {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.loadingText {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 30px 0;
+}
+
+.question {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.targetBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--surface-bg-alt);
+  border: 1px solid var(--border-color);
+}
+
+.targetSprite {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.targetName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.comparisonRow {
+  display: flex;
+  gap: 10px;
+}
+
+.comparisonOption {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  border-radius: 12px;
+  background: var(--surface-bg);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+}
+
+.comparisonOption:disabled {
+  cursor: default;
+}
+
+.comparisonSprite {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.comparisonName {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.comparisonValue {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.optionCorrect {
+  border-color: #2fa84f;
+  background: rgba(47, 168, 79, 0.12);
+}
+
+.optionWrong {
+  border-color: var(--danger-border);
+  background: var(--danger-bg);
+}
+
+.choiceList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choiceOption {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--surface-bg);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.choiceOption:disabled {
+  cursor: default;
+}
+
+.choiceCorrect {
+  border-color: #2fa84f;
+  background: rgba(47, 168, 79, 0.12);
+}
+
+.choiceWrong {
+  border-color: var(--danger-border);
+  background: var(--danger-bg);
+}
+
+.nextButton {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.nextButton:active {
+  background: var(--accent-blue-dark);
+}
